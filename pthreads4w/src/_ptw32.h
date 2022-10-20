@@ -163,7 +163,7 @@
    * note: ETIMEDOUT is no longer defined in winsock.h
    * WSAETIMEDOUT is so use its value.
    */
-#  include <winsock.h>
+#  include <winsock2.h>
 #  if defined(WSAETIMEDOUT)
 #    define ETIMEDOUT WSAETIMEDOUT
 #  else

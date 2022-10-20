@@ -13,6 +13,7 @@
 
 #include <stddef.h>
 #include <stdint.h>
+#include <stdlib.h>
 
 /**
  * @brief string_to_uint16 - Convert char* to UINT16
@@ -40,7 +41,8 @@ uint8_t string_to_uint32 (const char*  string_val, uint32_t* uint32_val);
 
 
 #ifdef _WIN32
-#include <winsock.h>
+#define WIN32_LEAN_AND_MEAN
+#include <winsock2.h>
 #else
 #include <sys/socket.h>
 #include <sys/time.h>
