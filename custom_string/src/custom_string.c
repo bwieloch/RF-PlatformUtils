@@ -7,14 +7,14 @@ rfInt rf_strcmp(const char* string1, const char* string2 )
 {
     for (rfUint32 i = 0; ; i++)
     {
-        if (string1[i] == '\0')
-        {
-            return 0;
-        }
-
         if (string1[i] != string2[i])
         {
             return string1[i] < string2[i] ? -1 : 1;
+        }
+
+        if (string1[i] == '\0')
+        {
+            return 0;
         }
 
     }
